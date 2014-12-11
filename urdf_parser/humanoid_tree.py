@@ -11,6 +11,7 @@ class Link:
         self.inertia = None # in link ref frame
         self.cg = None      # in link ref frame
         self.mesh_name = None
+        self.visual_offset = None
 
         self.mdh_zaxis = None
         self.mdh_rotation = None
@@ -40,6 +41,7 @@ class HumanoidTree:
             print 'inertia:\n', root.inertia
             print 'cg:', root.cg
             print 'mesh:', root.mesh_name
+            print 'visual offset', root.visual_offset
             print 'pos rel parent:', root.pos_rel_plink
             print 'rpy rel parent:', root.rpy_rel_plink
             print 'mdh z:', root.mdh_zaxis

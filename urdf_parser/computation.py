@@ -184,6 +184,9 @@ def MDH_massage(parent, child):
     t3 = child.mdh_rotation* matrix(child.cg).T
     child.cg = list(array(t3).reshape(-1))
 
+    t4 = child.mdh_rotation* matrix(child.visual_offset).T
+    child.visual_offset = list(array(t4).reshape(-1))
+
     return
 
 

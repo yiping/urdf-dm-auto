@@ -101,6 +101,10 @@ def getLinkInertiaInfo(robot, link):
     meshname = curr.find("./visual/geometry/mesh").attrib['filename']
     meshname = os.path.splitext(os.path.split(meshname)[1])[0]
     meshname = "meshes/"+meshname+".xan"
+
+    visual_offset_str = curr.find("./visual/origin").attrib['xyz']
+    visual_offset = [float(x) for x in visual_offset_str.strip().split(' ')]
+    
     mass = float(curr.find("./inertial/mass").attrib['value'])
 
     #print mass
@@ -130,6 +134,7 @@ def getLinkInertiaInfo(robot, link):
     link.inertia =Icmbar2Ibar(mass, inertia, cg)
     link.cg = cg
     link.mesh_name = meshname
+    link.visual_offset = visual_offset
 
 urdf_file_name = 'atlas_urdf/atlas_v4.urdf'
 tree = ET.parse(urdf_file_name)
@@ -299,3 +304,23 @@ output_dm_string = dm_prefix+indent_string(4, rootlink.dm_string)+dm_suffix
 f=open("atlas.dm",'w')
 f.write(output_dm_string)
 f.close()
+
+
+# get graphics 
+import os, sys
+import sys
+sys.path.insert(0, './dae-xan')
+
+from ylfunctions import translate2xan
+for f in os.listdir("./dae-xan/dae_files"):
+    if f.endswith(".dae"):
+        currentlinkname = f[0:-4]
+        currentlink = None
+        for l in unique_links:
+            if l.name == currentlinkname:
+                currentlink = l
+        
+                fx = currentlinkname + '.xan'
+                print f, '-->', fx
+                path = './dae-xan/dae_files/'
+                translate2xan(path+f, path+fx, currentlink.mdh_rotation, currentlink.visual_offset)
