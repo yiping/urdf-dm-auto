@@ -22,7 +22,9 @@ I use ATLAS V3 URDF and meshes as the blue print. I initially tried V4, but ther
 It has been noticed that most link dae file has 4 layers of nodes, some has 4, and some only has 2. Each layer contains a rotation and an offset. My extraction script only works with the specific atlas model.
 - For Atlas V3 model, most link dae files only have 1 geometry, but l_uleg and r_uleg have two geometry (the second one is for thigh label). I don't have a general script to iterate all the geometries, but just some special treatment for these two links.
 - The translation from urdf description to Modified D-H convention are based on empirical rules (I didn't aim for an exhaustive rule-base (there shouldn't be too many anyway) but just create one when I need to, and some rules may be redundant and some can be generalized). It turns out to be working pretty well, and can add z_screws as needed. But please pay attention to the two special cases:
-##### The child z-axis is parallel to the parent z-axis, and the x,y offset (in parent frame) are non-zero 
+
+## The child z-axis is parallel to the parent z-axis, and the x,y offset (in parent frame) are non-zero 
 example: l_uleg and l_lleg
-##### The child z-axis is not orthogonal to any of parent's axis, and the child is not at the tip
+
+## The child z-axis is not orthogonal to any of parent's axis, and the child is not at the tip
 example: utoro and l_clav, there involves an additional rotation. 
