@@ -17,6 +17,7 @@ class Link:
         self.mdh_rotation = None
         self.mdh_zscrew_params = None
         self.mdh_params = None
+        self.special_theta = None
 
         #transform from the parent link to the child link 
         self.pos_rel_plink = None # in parent link ref frame

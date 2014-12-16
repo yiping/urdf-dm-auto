@@ -1,11 +1,10 @@
-
 # DynaMechs V 4.0 ascii
 
 Articulation {
-	Name	"Articulation"
-	Graphics_Model		""
-	Position			0	0	0
-	Orientation_Quat	0	0	0	1
+    Name	"Articulation"
+    Graphics_Model		""
+    Position			0	0	0
+    Orientation_Quat	0	0	0	1
     
     MobileBaseLink {
         Name    "pelvis"
@@ -20,7 +19,7 @@ Articulation {
         Orientation_Quat	0.000000	0.000000	0	1
         Velocity 0 0 0 0 0 0
     }
-    Branch{
+    Branch {
         
         RevoluteLink {
             Name    "ltorso"
@@ -43,7 +42,7 @@ Articulation {
         
         ZScrewTxLink {
             Name	"ZS_mtorso"
-            ZScrew_Parameters      0.162000   0.00000000	
+            ZScrew_Parameters      0.161970   0.00000000	
         }
         
         
@@ -75,11 +74,11 @@ Articulation {
         RevoluteLink {
             Name    "utorso"
             Graphics_Model    "meshes/utorso.xan"
-            Mass    63.730
-            Inertia      1.515128  -0.001000   1.467549 
-                        -0.001000   7.676959  -0.003620 
-                         1.467549  -0.003620   7.417831
-            Center_of_Gravity      0.305600   0.000000  -0.058100
+            Mass    52.007
+            Inertia      1.743063  -0.001000   1.776074 
+                        -0.001000   6.633693  -0.003620 
+                         1.776074  -0.003620   6.146630
+            Center_of_Gravity      0.300000   0.000000  -0.092300
             Number_of_Contact_Points	0
             MDH_Parameters	 0.0000    -1.57079633    0.0000     0.00000000
             Initial_Joint_Velocity	0
@@ -90,11 +89,11 @@ Articulation {
             Joint_Friction	0
         }
         
-        Branch{
+        Branch {
             
             ZScrewTxLink {
                 Name	"ZS_l_clav"
-                ZScrew_Parameters      0.140600  -1.57079633	
+                ZScrew_Parameters      0.064410  -2.09439530	
             }
             
             
@@ -102,12 +101,12 @@ Articulation {
                 Name    "l_clav"
                 Graphics_Model    "meshes/l_clav.xan"
                 Mass     3.450
-                Inertia      0.282748   0.000000   0.004265 
-                             0.000000   0.289263   0.000000 
-                             0.004265   0.000000   0.008515
-                Center_of_Gravity      0.000000   0.000000  -0.284000
+                Inertia      0.033343   0.008955   0.015511 
+                             0.008955   0.035456  -0.013572 
+                             0.015511  -0.013572   0.019785
+                Center_of_Gravity     -0.000431   0.000000   0.096746
                 Number_of_Contact_Points	0
-                MDH_Parameters	 0.2036    -1.57079633    0.4776     0.00000000
+                MDH_Parameters	 0.0665    -1.57079633    0.1622     0.00000000
                 Initial_Joint_Velocity	0
                 Joint_Limits	0	0
                 Joint_Limit_Spring_Constant	0
@@ -119,7 +118,7 @@ Articulation {
             
             ZScrewTxLink {
                 Name	"ZS_l_scap"
-                ZScrew_Parameters     -0.251100   0.00000000	
+                ZScrew_Parameters      0.239994   0.00000000	
             }
             
             
@@ -128,11 +127,11 @@ Articulation {
                 Graphics_Model    "meshes/l_scap.xan"
                 Mass     3.012
                 Inertia      0.005830   0.000000   0.000000 
-                             0.000000   0.003190   0.000000 
-                             0.000000   0.000000   0.005830
+                             0.000000   0.003190  -0.000000 
+                             0.000000  -0.000000   0.005830
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
-                MDH_Parameters	 0.0981     1.57079633    0.0000     0.00000000
+                MDH_Parameters	 0.0235     1.57079633    0.0000     0.00000000
                 Initial_Joint_Velocity	0
                 Joint_Limits	0	0
                 Joint_Limit_Spring_Constant	0
@@ -237,11 +236,11 @@ Articulation {
             
         }
         
-        Branch{
+        Branch {
             
             ZScrewTxLink {
                 Name	"ZS_head"
-                ZScrew_Parameters      0.254600   0.00000000	
+                ZScrew_Parameters      0.216720   0.00000000	
             }
             
             
@@ -254,7 +253,7 @@ Articulation {
                              0.000002   0.002080   0.005061
                 Center_of_Gravity      0.027740  -0.075493   0.000033
                 Number_of_Contact_Points	0
-                MDH_Parameters	 0.6215     1.57079633    0.0000     0.00000000
+                MDH_Parameters	 0.5380     1.57079633    0.0000     0.00000000
                 Initial_Joint_Velocity	0
                 Joint_Limits	0	0
                 Joint_Limit_Spring_Constant	0
@@ -265,11 +264,11 @@ Articulation {
             
         }
         
-        Branch{
+        Branch {
             
             ZScrewTxLink {
                 Name	"ZS_r_clav"
-                ZScrew_Parameters      0.140600  -1.57079633	
+                ZScrew_Parameters      0.064410  -1.04719735	
             }
             
             
@@ -277,12 +276,12 @@ Articulation {
                 Name    "r_clav"
                 Graphics_Model    "meshes/r_clav.xan"
                 Mass     3.450
-                Inertia      0.282748   0.000000  -0.004265 
-                             0.000000   0.289263   0.000000 
-                            -0.004265   0.000000   0.008515
-                Center_of_Gravity      0.000000   0.000000  -0.284000
+                Inertia      0.033343   0.008955  -0.015511 
+                             0.008955   0.035456   0.013572 
+                            -0.015511   0.013572   0.019785
+                Center_of_Gravity      0.000431   0.000000   0.096746
                 Number_of_Contact_Points	0
-                MDH_Parameters	 -0.2036    -1.57079633    0.4776     0.00000000
+                MDH_Parameters	 -0.0665    -1.57079633    0.1622     0.00000000
                 Initial_Joint_Velocity	0
                 Joint_Limits	0	0
                 Joint_Limit_Spring_Constant	0
@@ -294,7 +293,7 @@ Articulation {
             
             ZScrewTxLink {
                 Name	"ZS_r_scap"
-                ZScrew_Parameters     -0.251100   0.00000000	
+                ZScrew_Parameters      0.239994   0.00000000	
             }
             
             
@@ -303,11 +302,11 @@ Articulation {
                 Graphics_Model    "meshes/r_scap.xan"
                 Mass     3.012
                 Inertia      0.005830   0.000000   0.000000 
-                             0.000000   0.003190   0.000000 
-                             0.000000   0.000000   0.005830
+                             0.000000   0.003190  -0.000000 
+                             0.000000  -0.000000   0.005830
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
-                MDH_Parameters	 -0.0981     1.57079633    0.0000     0.00000000
+                MDH_Parameters	 -0.0235     1.57079633    0.0000     0.00000000
                 Initial_Joint_Velocity	0
                 Joint_Limits	0	0
                 Joint_Limit_Spring_Constant	0
@@ -328,8 +327,8 @@ Articulation {
                 Graphics_Model    "meshes/r_uarm.xan"
                 Mass     3.388
                 Inertia      0.003580   0.000000   0.000000 
-                             0.000000   0.020874   0.000000 
-                             0.000000   0.000000   0.020874
+                             0.000000   0.020874  -0.000000 
+                             0.000000  -0.000000   0.020874
                 Center_of_Gravity      0.000000   0.000000   0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0160     1.57079633    -0.1870     0.00000000
@@ -353,8 +352,8 @@ Articulation {
                 Graphics_Model    "meshes/r_larm.xan"
                 Mass     2.509
                 Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460   0.000000 
-                             0.000000   0.000000   0.002650
+                             0.000000   0.004460  -0.000000 
+                             0.000000  -0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0092    -1.57079633    0.0000     0.00000000
@@ -372,8 +371,8 @@ Articulation {
                 Graphics_Model    "meshes/r_farm.xan"
                 Mass     3.388
                 Inertia      0.003580   0.000000   0.000000 
-                             0.000000   0.020874   0.000000 
-                             0.000000   0.000000   0.020874
+                             0.000000   0.020874  -0.000000 
+                             0.000000  -0.000000   0.020874
                 Center_of_Gravity      0.000000   0.000000   0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 -0.0092     1.57079633    -0.1870     0.00000000
@@ -397,8 +396,8 @@ Articulation {
                 Graphics_Model    "meshes/r_hand.xan"
                 Mass     2.509
                 Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460   0.000000 
-                             0.000000   0.000000   0.002650
+                             0.000000   0.004460  -0.000000 
+                             0.000000  -0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0092    -1.57079633    0.0000     0.00000000
@@ -414,7 +413,7 @@ Articulation {
         
     }
     
-    Branch{
+    Branch {
         
         ZScrewTxLink {
             Name	"ZS_l_uglut"
@@ -475,7 +474,7 @@ Articulation {
                          0.000000   0.000000   0.496117
             Center_of_Gravity      0.210000   0.000000   0.000000
             Number_of_Contact_Points	0
-            MDH_Parameters	 0.0660    -1.57079633    0.0225     0.00000000
+            MDH_Parameters	 0.0500    -1.57079633    0.0000     0.00000000
             Initial_Joint_Velocity	0
             Joint_Limits	0	0
             Joint_Limit_Spring_Constant	0
@@ -549,7 +548,7 @@ Articulation {
         
     }
     
-    Branch{
+    Branch {
         
         ZScrewTxLink {
             Name	"ZS_r_uglut"
@@ -610,7 +609,7 @@ Articulation {
                          0.000000   0.000000   0.496117
             Center_of_Gravity      0.210000   0.000000   0.000000
             Number_of_Contact_Points	0
-            MDH_Parameters	 0.0660    -1.57079633    -0.0225     0.00000000
+            MDH_Parameters	 0.0500    -1.57079633    0.0000     0.00000000
             Initial_Joint_Velocity	0
             Joint_Limits	0	0
             Joint_Limit_Spring_Constant	0

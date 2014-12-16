@@ -136,7 +136,7 @@ def getLinkInertiaInfo(robot, link):
     link.mesh_name = meshname
     link.visual_offset = visual_offset
 
-urdf_file_name = 'atlas_urdf/atlas_v4.urdf'
+urdf_file_name = 'urdf_v3/atlas_v3.urdf'
 tree = ET.parse(urdf_file_name)
 robot = tree.getroot()
 
@@ -197,7 +197,7 @@ for j in active_joints:
             child_link = l
             
     str1 = j.find('./axis').attrib['xyz']
-    mdh_z = [int(x) for x in str1.strip().split(' ')]
+    mdh_z = [float(x) for x in str1.strip().split(' ')]
     child_link.mdh_zaxis = mdh_z
 
     str2 = j.find('./origin').attrib['xyz']
@@ -250,14 +250,13 @@ while len(d)>0:
 d.clear()
 d.append(rootlink)
 
-dm_prefix = """
-# DynaMechs V 4.0 ascii
+dm_prefix = """# DynaMechs V 4.0 ascii
 
 Articulation {
-	Name	"Articulation"
-	Graphics_Model		""
-	Position			0	0	0
-	Orientation_Quat	0	0	0	1
+    Name	"Articulation"
+    Graphics_Model		""
+    Position			0	0	0
+    Orientation_Quat	0	0	0	1
 """
 dm_suffix = """
 }
@@ -276,7 +275,7 @@ def assemble_dm_string(root):
         for i in range(n):
             assemble_dm_string( root.children[i] )
             if n>1:
-                root.dm_string = root.dm_string + """Branch{
+                root.dm_string = root.dm_string + """Branch {
 """
             if n>1:
                 ss = indent_string(4, root.children[i].dm_string)
@@ -312,7 +311,8 @@ import sys
 sys.path.insert(0, './dae-xan')
 
 from ylfunctions import translate2xan
-for f in os.listdir("./dae-xan/dae_files"):
+
+for f in os.listdir("./dae-xan/dae_v3"):
     if f.endswith(".dae"):
         currentlinkname = f[0:-4]
         currentlink = None
@@ -322,5 +322,7 @@ for f in os.listdir("./dae-xan/dae_files"):
         
                 fx = currentlinkname + '.xan'
                 print f, '-->', fx
-                path = './dae-xan/dae_files/'
+                path = './dae-xan/dae_v3/'
+                print currentlink.mdh_rotation
+                print currentlink.visual_offset
                 translate2xan(path+f, path+fx, currentlink.mdh_rotation, currentlink.visual_offset)
