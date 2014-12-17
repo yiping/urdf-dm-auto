@@ -28,3 +28,17 @@ example: l_uleg and l_lleg
 
 ## The child z-axis is not orthogonal to any of parent's axis, and the child is not at the tip
 example: utoro and l_clav, there involves an additional rotation. 
+
+
+# About URDF notation
+##<mass> 
+mass value
+##<origin> 
+Link center of mass. The xyz offset is defined in the link local reference frame
+Attributes:
+- xyz (required) | Position offset of the center of mass of the link with respect to the link origin in the link local reference frame
+- rpy (required) | Roll, pitch and yaw orientation offsets of the inertial frame in local link frame. All angles are always in radians.
+##<inertia>
+Moment of inertia
+Attributes:
+- ixx, iyy, izz, ixy, iyz, ixz (required) | Components of the inertia matrix for the link. The inertia parameters are specified with respect to the center of the mass in local link coordinate system.
