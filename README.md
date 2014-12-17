@@ -23,24 +23,29 @@ It has been noticed that most link dae file has 4 layers of nodes, some has 4, a
 - For Atlas V3 model, most link dae files only have 1 geometry, but l_uleg and r_uleg have two geometry (the second one is for thigh label). I don't have a general script to iterate all the geometries, but just some special treatment for these two links.
 - The translation from urdf description to Modified D-H convention are based on empirical rules (I didn't aim for an exhaustive rule-base (there shouldn't be too many anyway) but just create one when I need to, and some rules may be redundant and some can be generalized). It turns out to be working pretty well, and can add z_screws as needed. But please pay attention to the two special cases:
 
-## The child z-axis is parallel to the parent z-axis, and the x,y offset (in parent frame) are non-zero 
+### The child z-axis is parallel to the parent z-axis, and the x,y offset (in parent frame) are non-zero 
 example: l_uleg and l_lleg
 
-## The child z-axis is not orthogonal to any of parent's axis, and the child is not at the tip
+### The child z-axis is not orthogonal to any of parent's axis, and the child is not at the tip
 example: utoro and l_clav, there involves an additional rotation. 
 
 
 # About URDF notation
-##<mass> 
+
+## <mass> 
 mass value
 
-##<origin> 
+## <origin> 
 Link center of mass. The xyz offset is defined in the link local reference frame
 Attributes:
 - xyz (required) | Position offset of the center of mass of the link with respect to the link origin in the link local reference frame
 - rpy (required) | Roll, pitch and yaw orientation offsets of the inertial frame in local link frame. All angles are always in radians.
 
-##<inertia>
+## <inertia>
 Moment of inertia
 Attributes:
 - ixx, iyy, izz, ixy, iyz, ixz (required) | Components of the inertia matrix for the link. The inertia parameters are specified with respect to the center of the mass in local link coordinate system.
+
+---
+
+See http://wiki.ros.org/urdf/XML/inertial
