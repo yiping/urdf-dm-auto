@@ -67,7 +67,7 @@ Atlas V3 Mesh:
 
 ---
 
-Atlas V3 Clavicle: 
+Atlas V3 Skeleton: 
 ![alt text][skeleton]
 
 [skeleton]: https://raw.githubusercontent.com/yiping/image-repo/master/Screenshot%20from%202014-12-18%2001:21:29.png "Atlas V3 skeleton"
