@@ -49,3 +49,26 @@ Attributes:
 ---
 
 See http://wiki.ros.org/urdf/XML/inertial
+
+
+---
+
+Atlas V3 Clavicle: 
+![alt text][clavicle]
+
+[clavicle]: https://raw.githubusercontent.com/yiping/image-repo/master/Screenshot%20from%202014-12-14%2020:48:56.png "Atlas V3 clavicle"
+
+---
+
+Atlas V3 Mesh: 
+![alt text][mesh]
+
+[mesh]: https://raw.githubusercontent.com/yiping/image-repo/master/Screenshot%20from%202014-12-18%2001:21:12.png "Atlas V3 mesh"
+
+---
+
+Atlas V3 Clavicle: 
+![alt text][skeleton]
+
+[skeleton]: https://raw.githubusercontent.com/yiping/image-repo/master/Screenshot%20from%202014-12-18%2001:21:29.png "Atlas V3 skeleton"
+
