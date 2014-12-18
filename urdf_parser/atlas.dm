@@ -50,9 +50,9 @@ Articulation {
             Name    "mtorso"
             Graphics_Model    "meshes/mtorso.xan"
             Mass     0.690
-            Inertia      0.001219   0.000212   0.000135 
-                         0.000212   0.000609  -0.000330 
-                         0.000135  -0.000330   0.001175
+            Inertia      0.001219  -0.000212  -0.000135 
+                        -0.000212   0.000609  -0.000330 
+                        -0.000135  -0.000330   0.001175
             Center_of_Gravity     -0.008163  -0.030597  -0.013125
             Number_of_Contact_Points	0
             MDH_Parameters	 0.0000    -1.57079633    0.0000     0.00000000
@@ -101,9 +101,9 @@ Articulation {
                 Name    "l_clav"
                 Graphics_Model    "meshes/l_clav.xan"
                 Mass     3.450
-                Inertia      0.033343   0.008955   0.015511 
-                             0.008955   0.035456  -0.013572 
-                             0.015511  -0.013572   0.019785
+                Inertia      0.043505   0.000000   0.000309 
+                             0.000000   0.043292   0.000000 
+                             0.000309   0.000000   0.001787
                 Center_of_Gravity     -0.000431   0.000000   0.096746
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0665    -1.57079633    0.1622     0.00000000
@@ -127,8 +127,8 @@ Articulation {
                 Graphics_Model    "meshes/l_scap.xan"
                 Mass     3.012
                 Inertia      0.005830   0.000000   0.000000 
-                             0.000000   0.003190  -0.000000 
-                             0.000000  -0.000000   0.005830
+                             0.000000   0.005830   0.000000 
+                             0.000000   0.000000   0.003190
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0235     1.57079633    0.0000     0.00000000
@@ -151,9 +151,9 @@ Articulation {
                 Name    "l_uarm"
                 Graphics_Model    "meshes/l_uarm.xan"
                 Mass     3.388
-                Inertia      0.003580   0.000000   0.000000 
+                Inertia      0.020874   0.000000   0.000000 
                              0.000000   0.020874   0.000000 
-                             0.000000   0.000000   0.020874
+                             0.000000   0.000000   0.003580
                 Center_of_Gravity      0.000000   0.000000  -0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0160     1.57079633    0.1870     0.00000000
@@ -176,8 +176,8 @@ Articulation {
                 Name    "l_larm"
                 Graphics_Model    "meshes/l_larm.xan"
                 Mass     2.509
-                Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460   0.000000 
+                Inertia      0.004460  -0.000000   0.000000 
+                            -0.000000   0.004460   0.000000 
                              0.000000   0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
@@ -195,9 +195,9 @@ Articulation {
                 Name    "l_farm"
                 Graphics_Model    "meshes/l_farm.xan"
                 Mass     3.388
-                Inertia      0.003580   0.000000   0.000000 
+                Inertia      0.020874   0.000000   0.000000 
                              0.000000   0.020874   0.000000 
-                             0.000000   0.000000   0.020874
+                             0.000000   0.000000   0.003580
                 Center_of_Gravity      0.000000   0.000000  -0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 -0.0092     1.57079633    0.1870     0.00000000
@@ -220,8 +220,8 @@ Articulation {
                 Name    "l_hand"
                 Graphics_Model    "meshes/l_hand.xan"
                 Mass     2.509
-                Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460   0.000000 
+                Inertia      0.004460  -0.000000   0.000000 
+                            -0.000000   0.004460   0.000000 
                              0.000000   0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
@@ -248,9 +248,9 @@ Articulation {
                 Name    "head"
                 Graphics_Model    "meshes/head.xan"
                 Mass     1.420
-                Inertia      0.013302  -0.000002   0.000002 
-                            -0.000002   0.011616   0.002080 
-                             0.000002   0.002080   0.005061
+                Inertia      0.011616   0.002080  -0.000002 
+                             0.002080   0.005061   0.000002 
+                            -0.000002   0.000002   0.013302
                 Center_of_Gravity      0.027740  -0.075493   0.000033
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.5380     1.57079633    0.0000     0.00000000
@@ -276,9 +276,9 @@ Articulation {
                 Name    "r_clav"
                 Graphics_Model    "meshes/r_clav.xan"
                 Mass     3.450
-                Inertia      0.033343   0.008955  -0.015511 
-                             0.008955   0.035456   0.013572 
-                            -0.015511   0.013572   0.019785
+                Inertia      0.043505   0.000000  -0.000309 
+                             0.000000   0.043292   0.000000 
+                            -0.000309   0.000000   0.001787
                 Center_of_Gravity      0.000431   0.000000   0.096746
                 Number_of_Contact_Points	0
                 MDH_Parameters	 -0.0665    -1.57079633    0.1622     0.00000000
@@ -301,9 +301,9 @@ Articulation {
                 Name    "r_scap"
                 Graphics_Model    "meshes/r_scap.xan"
                 Mass     3.012
-                Inertia      0.005830   0.000000   0.000000 
-                             0.000000   0.003190  -0.000000 
-                             0.000000  -0.000000   0.005830
+                Inertia      0.005830  -0.000000   0.000000 
+                            -0.000000   0.005830   0.000000 
+                             0.000000   0.000000   0.003190
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 -0.0235     1.57079633    0.0000     0.00000000
@@ -326,9 +326,9 @@ Articulation {
                 Name    "r_uarm"
                 Graphics_Model    "meshes/r_uarm.xan"
                 Mass     3.388
-                Inertia      0.003580   0.000000   0.000000 
-                             0.000000   0.020874  -0.000000 
-                             0.000000  -0.000000   0.020874
+                Inertia      0.020874   0.000000  -0.000000 
+                             0.000000   0.020874   0.000000 
+                            -0.000000   0.000000   0.003580
                 Center_of_Gravity      0.000000   0.000000   0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0160     1.57079633    -0.1870     0.00000000
@@ -352,8 +352,8 @@ Articulation {
                 Graphics_Model    "meshes/r_larm.xan"
                 Mass     2.509
                 Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460  -0.000000 
-                             0.000000  -0.000000   0.002650
+                             0.000000   0.004460   0.000000 
+                             0.000000   0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0092    -1.57079633    0.0000     0.00000000
@@ -370,9 +370,9 @@ Articulation {
                 Name    "r_farm"
                 Graphics_Model    "meshes/r_farm.xan"
                 Mass     3.388
-                Inertia      0.003580   0.000000   0.000000 
-                             0.000000   0.020874  -0.000000 
-                             0.000000  -0.000000   0.020874
+                Inertia      0.020874   0.000000  -0.000000 
+                             0.000000   0.020874   0.000000 
+                            -0.000000   0.000000   0.003580
                 Center_of_Gravity      0.000000   0.000000   0.065000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 -0.0092     1.57079633    -0.1870     0.00000000
@@ -396,8 +396,8 @@ Articulation {
                 Graphics_Model    "meshes/r_hand.xan"
                 Mass     2.509
                 Inertia      0.004460   0.000000   0.000000 
-                             0.000000   0.004460  -0.000000 
-                             0.000000  -0.000000   0.002650
+                             0.000000   0.004460   0.000000 
+                             0.000000   0.000000   0.002650
                 Center_of_Gravity      0.000000   0.000000   0.000000
                 Number_of_Contact_Points	0
                 MDH_Parameters	 0.0092    -1.57079633    0.0000     0.00000000
@@ -425,9 +425,9 @@ Articulation {
             Name    "l_uglut"
             Graphics_Model    "meshes/l_uglut.xan"
             Mass     0.648
-            Inertia      0.000713  -0.000012  -0.000007 
-                        -0.000012   0.000757  -0.000039 
-                        -0.000007  -0.000039   0.000438
+            Inertia      0.000713  -0.000012   0.000007 
+                        -0.000012   0.000757   0.000039 
+                         0.000007   0.000039   0.000438
             Center_of_Gravity     -0.003447  -0.005293   0.003130
             Number_of_Contact_Points	0
             MDH_Parameters	 0.0890     0.00000000    0.0000     0.00000000
@@ -444,9 +444,9 @@ Articulation {
             Name    "l_lglut"
             Graphics_Model    "meshes/l_lglut.xan"
             Mass     0.866
-            Inertia      0.001471   0.000363   0.000599 
-                         0.000363   0.001786  -0.000219 
-                         0.000599  -0.000219   0.002266
+            Inertia      0.002266   0.000599  -0.000219 
+                         0.000599   0.001471   0.000363 
+                        -0.000219   0.000363   0.001786
             Center_of_Gravity      0.017048  -0.031205   0.013334
             Number_of_Contact_Points	0
             MDH_Parameters	 0.0000     1.57079633    0.0000     0.00000000
@@ -469,8 +469,8 @@ Articulation {
             Name    "l_uleg"
             Graphics_Model    "meshes/l_uleg.xan"
             Mass     9.209
-            Inertia      0.496117   0.000000   0.000000 
-                         0.000000   0.020000   0.000000 
+            Inertia      0.020000   0.000000   0.000000 
+                         0.000000   0.496117   0.000000 
                          0.000000   0.000000   0.496117
             Center_of_Gravity      0.210000   0.000000   0.000000
             Number_of_Contact_Points	0
@@ -494,9 +494,9 @@ Articulation {
             Name    "l_lleg"
             Graphics_Model    "meshes/l_lleg.xan"
             Mass     5.479
-            Inertia      0.267601  -0.000000  -0.000000 
-                        -0.000000   0.010005   0.001975 
-                        -0.000000   0.001975   0.268595
+            Inertia      0.010005  -0.001975   0.000000 
+                        -0.001975   0.268595   0.000000 
+                         0.000000   0.000000   0.267601
             Center_of_Gravity      0.187000  -0.001000   0.000000
             Number_of_Contact_Points	0
             MDH_Parameters	 0.3773     0.00000000    0.0000    -0.13290179
@@ -513,9 +513,9 @@ Articulation {
             Name    "l_talus"
             Graphics_Model    "meshes/l_talus.xan"
             Mass     0.125
-            Inertia      0.000008   0.000000  -0.000000 
-                         0.000000   0.000013   0.000000 
-                        -0.000000   0.000000   0.000010
+            Inertia      0.000013  -0.000000   0.000000 
+                        -0.000000   0.000010   0.000000 
+                         0.000000   0.000000   0.000008
             Center_of_Gravity      0.000000   0.000000   0.000000
             Number_of_Contact_Points	0
             MDH_Parameters	 0.4220     0.00000000    0.0000     0.00000000
@@ -560,9 +560,9 @@ Articulation {
             Name    "r_uglut"
             Graphics_Model    "meshes/r_uglut.xan"
             Mass     0.648
-            Inertia      0.000713   0.000012   0.000007 
-                         0.000012   0.000757  -0.000039 
-                         0.000007  -0.000039   0.000438
+            Inertia      0.000713   0.000012  -0.000007 
+                         0.000012   0.000757   0.000039 
+                        -0.000007   0.000039   0.000438
             Center_of_Gravity      0.003447  -0.005293   0.003130
             Number_of_Contact_Points	0
             MDH_Parameters	 -0.0890     0.00000000    0.0000     0.00000000
@@ -579,9 +579,9 @@ Articulation {
             Name    "r_lglut"
             Graphics_Model    "meshes/r_lglut.xan"
             Mass     0.866
-            Inertia      0.001471   0.000363  -0.000599 
-                         0.000363   0.001786   0.000219 
-                        -0.000599   0.000219   0.002266
+            Inertia      0.002266  -0.000599   0.000219 
+                        -0.000599   0.001471   0.000363 
+                         0.000219   0.000363   0.001786
             Center_of_Gravity     -0.017048  -0.031205   0.013334
             Number_of_Contact_Points	0
             MDH_Parameters	 0.0000     1.57079633    0.0000     0.00000000
@@ -604,8 +604,8 @@ Articulation {
             Name    "r_uleg"
             Graphics_Model    "meshes/r_uleg.xan"
             Mass     9.209
-            Inertia      0.496117   0.000000   0.000000 
-                         0.000000   0.020000   0.000000 
+            Inertia      0.020000   0.000000   0.000000 
+                         0.000000   0.496117   0.000000 
                          0.000000   0.000000   0.496117
             Center_of_Gravity      0.210000   0.000000   0.000000
             Number_of_Contact_Points	0
@@ -629,9 +629,9 @@ Articulation {
             Name    "r_lleg"
             Graphics_Model    "meshes/r_lleg.xan"
             Mass     5.479
-            Inertia      0.267601  -0.000000  -0.000000 
-                        -0.000000   0.010005   0.001975 
-                        -0.000000   0.001975   0.268595
+            Inertia      0.010005  -0.001975   0.000000 
+                        -0.001975   0.268595   0.000000 
+                         0.000000   0.000000   0.267601
             Center_of_Gravity      0.187000  -0.001000   0.000000
             Number_of_Contact_Points	0
             MDH_Parameters	 0.3773     0.00000000    0.0000    -0.13290179
@@ -648,9 +648,9 @@ Articulation {
             Name    "r_talus"
             Graphics_Model    "meshes/r_talus.xan"
             Mass     0.125
-            Inertia      0.000008   0.000000  -0.000000 
-                         0.000000   0.000013   0.000000 
-                        -0.000000   0.000000   0.000010
+            Inertia      0.000013  -0.000000   0.000000 
+                        -0.000000   0.000010   0.000000 
+                         0.000000   0.000000   0.000008
             Center_of_Gravity      0.000000   0.000000   0.000000
             Number_of_Contact_Points	0
             MDH_Parameters	 0.4220     0.00000000    0.0000     0.00000000

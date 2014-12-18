@@ -30,14 +30,18 @@ def axisAngle2Rot(v, theta):
     #print type(Rot)
     return Rot
 
-def Icmbar2Ibar(m, Icmbar, c_g):
-    mc = mcross(c_g)
-    Ibar = Icmbar + m* mc* (mc.T)
+def Icmbar2Ibar(m, Icmbar, c_g, rot):
+    cg = matrix(c_g).T
+    cgl = list(array(rot*cg ).reshape(-1))
+    mc = mcross(cgl)
+    #print Icmbar
+    Ibar = rotCongruenceTx( rot, Icmbar) + m* mc* (mc.T)
     #print type(Ibar)
     return Ibar
 
 def rotCongruenceTx(R, I):
-    return R.T * I * R
+    #return R.T * I * R
+    return R * I * R.T
 
 ##def mdhAutoRotate(clink):
 ##    if clink.mdh_zaxis == None:
@@ -238,7 +242,12 @@ def MDH_massage(parent, child):
     if parent.special_theta != None:
         child.mdh_rotation =  child.mdh_rotation * rot
     
-    child.inertia = rotCongruenceTx( child.mdh_rotation, child.inertia)
+#    child.inertia =Icmbar2Ibar(child.mass, child.inertia, child.cg, child.mdh_rotation)
+#    child.inertia = rotCongruenceTx( child.mdh_rotation, child.inertia)
+    child.inertia =Icmbar2Ibar(child.mass, child.inertia, child.cg, child.mdh_rotation)
+
+    print child.name
+    print child.mdh_rotation
     t3 = child.mdh_rotation* matrix(child.cg).T
     child.cg = list(array(t3).reshape(-1))
 

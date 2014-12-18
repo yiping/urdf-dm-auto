@@ -131,7 +131,9 @@ def getLinkInertiaInfo(robot, link):
     link.mass = mass
     #print type(Icmbar[0,0]), type(parent_Rot_child[0,0])
     inertia = rotCongruenceTx(parent_Rot_child.T, Icmbar) # note the transpose
-    link.inertia =Icmbar2Ibar(mass, inertia, cg)
+    link.inertia = inertia
+    if link.name == 'pelvis':
+        link.inertia = link.inertia + mass*mcross(cg)*mcross(cg).T
     link.cg = cg
     link.mesh_name = meshname
     link.visual_offset = visual_offset

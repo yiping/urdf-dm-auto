@@ -1,0 +1,16 @@
+name = 'l_glut';
+mass=0.866;
+cg = [0.0133341 0.0170484 -0.0312052]';
+ixx=0.000691326; ixy=-2.24344e-05; ixz=2.50508e-06; iyy=0.00126856; iyz=0.000137862; izz=0.00106487;
+Icmbar = [ixx ixy ixz;
+          ixy iyy iyz;
+          ixz iyz izz];
+R = [0 1 0; 0 0 1; 1 0 0];
+
+Icom = [Icmbar zeros(3); zeros(3) mass*eye(3)];
+
+Ibar = Icmbar + mass*cr3(cg)*cr3(cg)'
+I_link = [Ibar, mass*cr3(cg); mass*cr3(cg)', mass*eye(1)]
+
+ 
+I_link_new = [R*Icmbar*R' + R*mass*cr3(Rcg)*cr3(cg)', mass*cr3(cg); mass*cr3(cg)', mass*eye(1)]
