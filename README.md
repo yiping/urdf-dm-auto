@@ -53,7 +53,7 @@ See http://wiki.ros.org/urdf/XML/inertial
 
 ---
 
-Atlas V3 Clavicle: 
+Atlas V3 Clavicle (viewed in MeshLab): 
 ![alt text][clavicle]
 
 [clavicle]: https://raw.githubusercontent.com/yiping/image-repo/master/Screenshot%20from%202014-12-14%2020:48:56.png "Atlas V3 clavicle"
