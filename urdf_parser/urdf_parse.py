@@ -127,13 +127,14 @@ def getLinkInertiaInfo(robot, link):
 ##        parent_Rot_child_2 = axisAngle2Rot(v, theta)
     parent_Rot_child = rpy2Rot(rpy[0], rpy[1], rpy[2])
     #print parent_Rot_child
-
-    link.mass = mass
+    
+    scale = 80.0/147.67384
+    link.mass = mass * scale
     #print type(Icmbar[0,0]), type(parent_Rot_child[0,0])
     inertia = rotCongruenceTx(parent_Rot_child.T, Icmbar) # note the transpose
-    link.inertia = inertia
+    link.inertia = inertia * scale
     if link.name == 'pelvis':
-        link.inertia = link.inertia + mass*mcross(cg)*mcross(cg).T
+        link.inertia = link.inertia + link.mass*mcross(cg)*mcross(cg).T
     link.cg = cg
     link.mesh_name = meshname
     link.visual_offset = visual_offset
@@ -216,11 +217,15 @@ rootlink.mdh_rotation = matrix(eye(3))
 
 d = deque([rootlink])
 
+totalmass = 0;
 while len(d)>0:
     current_link = d.popleft() 
+    totalmass = totalmass + current_link.mass;
     for i in range(current_link.children_cnt):
         d.append(current_link.children[i])
         current_link.children[i].tree_level = current_link.tree_level + 1
+
+print 'totalmass is ', totalmass
 
 # iterate again
 d.clear()
@@ -302,7 +307,7 @@ def indent_string(numSpace, ss):
 assemble_dm_string(rootlink)
 
 output_dm_string = dm_prefix+indent_string(4, rootlink.dm_string)+dm_suffix
-f=open("atlas.dm",'w')
+f=open("atlas_New.dm",'w')
 f.write(output_dm_string)
 f.close()
 

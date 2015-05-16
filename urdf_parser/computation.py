@@ -120,7 +120,7 @@ def MDH_massage(parent, child):
     elif abs(pos[0])<1e-10 and abs(pos[1])>1e-10 and abs(pos[2])<1e-10 and child.mdh_zaxis == [1,0,0]:
         print child.name, "invokes rule 5"
         child.mdh_zscrew_params = [0.0, -pi/2]
-        child.mdh_params = [pos[0], -pi/2.0, 0.0, 0.0]
+        child.mdh_params = [-pos[1], -pi/2.0, 0.0, 0.0]
         zsRot = matrix(expm( -pi/2*mcross([ 0, 0, 1]) ))
         Rot = matrix(expm( -pi/2*mcross([1,0, 0]) ))
         child.mdh_rotation = (   matrix(parent.mdh_rotation).T * zsRot * Rot).T
